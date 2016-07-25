@@ -14,7 +14,7 @@ namespace ConsoleApplication
 
            string connectionString = configuration.GetConnectionString("sample");
 
-           var user = new Student() { Name = "Perico", LastName = "Perez" };
+           var user = new Student() { Name = "David", LastName = "Gómez" };
            
            using (var context = StudentsContextFactory.Create(connectionString))
            {
@@ -23,6 +23,7 @@ namespace ConsoleApplication
            }
 
            Console.WriteLine($"Student was saved in the database with id : {user.Id}");
+            Console.ReadLine();
         }
     }
 }
